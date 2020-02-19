@@ -1,0 +1,48 @@
+CSS Options
+1
+h3{
+2
+  font-family: Calibri; 
+
+  font-size: 25pt;         
+4
+  font-style: normal; 
+5
+  font-weight: bold; 
+6
+  color:SlateBlue;
+7
+  text-align: center; 
+8
+  text-decoration: underline
+9
+}
+10
+​
+11
+table{
+12
+  font-family: Calibri; 
+13
+  color:white; 
+14
+  font-size: 11pt; 
+15
+  font-style: normal;
+16
+  font-weight: bold;
+17
+  text-align:; 
+18
+  background-color: SlateBlue; 
+19
+  border-collapse: collapse; 
+20
+  border: 2px solid navy
+21
+}
+22
+table.inner{
+23
+  border: 0px
+24
