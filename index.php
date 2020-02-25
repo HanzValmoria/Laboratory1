@@ -1,155 +1,124 @@
-!<DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="='X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<title>Php Form Validation</title>
+
 </head>
 <body>
+	<div class="container">
+		<div class="card">
+			<div class=""> 
+		</div>
+		<form action="results.php" method="POST">
+<h1>Student Form</h1>
+		<form action="">
+			<input placeholder="Firstname" type="text"  name="First_name">
+				<?php if(isset($Firstname_error)) {?>
+					<p><?php echo $Firstname_error ?> </p>
+				 <?php } ?>
 
-<form action="action_page">
-<div class="container">
-  <h2>Student Form Validation</h2>
-  <form action="/action_page.php" class="needs-validation" novalidate>
-    <div class="form-group">
-      <label for="uname">FirstName:</label>
-      <input type="text" class="form-control" id="uname" placeholder="Enter Firstname" name="uname" required>
-      <div class="valid-feedback">Valid.</div>
-      <div class="invalid-feedback">Please fill out this field.</div>
-    </div>
-
- <div class="form-group">
-      <label for="uname">LastName:</label>
-      <input type="text" class="form-control" id="uname" placeholder="Enter Lastname" name="uname" required>
-      <div class="valid-feedback">Valid.</div>
-      <div class="invalid-feedback">Please fill out this field.</div>
-    </div>
+			<input placeholder="Lastname" type="text"    name="Last_name"> 
+					<?php if(isset($Lastname_error)) {?>
+				<p><?php echo $Lastname_error ?> </p>
+		 <?php } ?>
 
 
- <div class="form-group">
-      <label for="uname">MiddleName:</label>
-      <input type="text" class="form-control" id="uname" placeholder="Enter Middlename" name="uname" required>
-      <div class="valid-feedback">Valid.</div>
-      <div class="invalid-feedback">Please fill out this field.</div>
-    </div>
+			<input placeholder="Middlename" type="text"   name="Middle_Name">
+			
+				<?php if(isset($Middlename_error)) {?>
+				<p><?php echo $Middlename_error ?> </p>
+		 <?php } ?>
 
-   
+			<input placeholder="Address" type="text"      name="Add_ress">
 
- <div class="form-group">
-      <label for="uname">Address:</label>
-      <input type="text" class="form-control" id="uname" placeholder="Address" name="uname" required>
-      <div class="valid-feedback">Valid.</div>
-      <div class="invalid-feedback">Please fill out this field.</div>
-    </div>
+			<?php if(isset($Address_error)) {?>
+				<p><?php echo $Address_error ?> </p>
+		 <?php } ?>
 
-      <label for="birthday">Date of Birth:</label>
-      <input type="date" id="birthday" name="birthday">
+			<input placeholder="DateofBirth" type="date" id="birthday" name="birth_day">
+			<?php if(isset($DateofBirth_error)) {?>
+				<p><?php echo $DateofBirth_error ?> </p>
+		 <?php } ?>
 
- 
+			<input placeholder="PlaceofBirth" type="text"   name="Place_birth">
 
- <div class="form-group">
-      <label for="uname">Place of Birth:</label>
-      <input type="text" class="form-control" id="uname" placeholder="Place of Birth" name="uname" required>
-      <div class="valid-feedback">Valid.</div>
-      <div class="invalid-feedback">Please fill out this field.</div>
-    </div>
-
-<div>
-    <label for="pwd">Gender:</label>
-<div><input type="radio" name="Gender" value="male" size="10">Male</div>
-<div><input type="radio" name="Gender" value="Female" size="10">Female</div>
-</div>
+			<?php if(isset($PlaceofBirth_error)) {?>
+				<p><?php echo $PlaceofBirth_error ?> </p>
+		 <?php } ?>
 
 
- 
- 
+		 			<h3> Gender </h3>
 
- <div class="form-group">
-      <label for="uname">Guardian:</label>
-      <input type="text" class="form-control" id="uname" placeholder="Guardian" name="uname" required>
-      <div class="valid-feedback">Valid.</div>
-      <div class="invalid-feedback">Please fill out this field.</div>
-    </div>
-
-
- <div class="form-group">
-      <label for="uname">Civil Status:</label>
-      <input type="text" class="form-control" id="uname" placeholder="Civil Status" name="uname" required>
-      <div class="valid-feedback">Valid.</div>
-      <div class="invalid-feedback">Please fill out this field.</div>
-    </div>
-
-
- <div class="form-group">
-      <label for="uname">Contact No:</label><br></br>
-  <input type="tel" id="phone" name="phone" placeholder="+639-4567-8901" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br><br>
-      <div class="valid-feedback">Valid.</div>
-      <div class="invalid-feedback">Please fill out this field.</div>
-    </div>
+ <p>		 <input type="radio" name="gender" value="male" >
+ 				<h5>Male</h5></p>
 
 
 
- <label for="pwd">Year Level:</label>
- <select name="City">
-<option value="-1" selected>select..</option>
-<option value="1styear">1styear</option>
-<option value="2ndyear">2ndyear</option>
-<option value="3rdyear">3rdyear</option>
-<option value="4thyear">4thyear</option>
-</select>
-
-<label for="pwd">Course:</label>
-<select name="Course">
-<option value="-1" selected>select..</option>
-<option value="BSIT">BSIT</option>
-<option value="TCM">TCM</option>
-<option value="DS">DS</option>
-<option value="COMe">COMe</option>
-</select>
-
-
- <div class="form-group">
-      <label for="uname">School Year:</label>
-      <input type="text" class="form-control" id="uname" placeholder="School Year" name="uname" required>
-      <div class="valid-feedback">Valid.</div>
-      <div class="invalid-feedback">Please fill out this field.</div>
-    </div>
+<p>		  <input type="radio" name="gender" value="female"> <h5>Female</h5> </p>
 
 
 
-    <div class="form-group form-check">
-      <label class="form-check-label">
-        <input class="form-check-input" type="checkbox" name="remember" required> I agree to share my information.
-        <div class="valid-feedback">Valid.</div>
-        <div class="invalid-feedback">Check this checkbox to continue.</div>
-      </label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-</div>
+			<p><input placeholder="Guardian" type="text"      name="Guar_dian"></p>								
+			<?php if(isset($Guardian_error)) {?>
+				<p><?php echo $Guardian_error ?> </p>
+		 <?php } ?>
+
+
+			<p><input placeholder="+639971650187" type="text"      name="Con_tact"></p>
+		
+			<?php if(isset($Contact_error)) {?>
+				<p><?php echo $Contact_error ?> </p>
+		 <?php } ?>
+
+
+			<p><input placeholder="Civil Status" type="text"      name="Civil_status"></p>
+
+			<?php if(isset($CivilStatus_error)) {?>
+				<p><?php echo$CivilStatus_error ?> </p>
+		 <?php } ?>
+
+		 
+			  <h4>YearLevel</h4>
+
+			  	<?php if(isset($YearLevel_error)) {?>
+				<p><?php echo $YearLeve_error ?> </p>
+		 <?php } ?>
+
+
+ 				<select name="Year_Level" >
+						<option value="-1" selected>select</option>
+						<option value="1styear">1styear</option>
+						<option value="2ndyear">2ndyear</option>
+						<option value="3rdyear">3rdyear</option>
+						<option value="4thyear">4thyear</option>
+					</select></p>
+
+				<h4>Course</h4>
+				<?php if(isset($Course_error)) {?>
+				<p><?php echo $Course_error ?> </p>
+		 <?php } ?>
+					<select name="Course_s" >
+						<option value="-1" selected>select</option>
+						<option value="BSIT">BSIT</option>
+						<option value="TCM">TCM</option>
+						<option value="DS">DS</option>
+						<option value="COMe">COMe</option>
+					</select>
+			<p><input placeholder="SchoolYear" type="text"      name="School_year"></p>
+			<?php if(isset($SchoolYear_error)) {?>
+				<p><?php echo $SchoolYear_error ?> </p>
+		 <?php } ?>
+				<input class="register_button" type="submit" value="Register" >
+ 				     
 </form>
-<script>
-// Disable form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Get the forms we want to add validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
-</script>
+
+
+	</div>
 
 </body>
 </html>
